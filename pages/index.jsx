@@ -3,6 +3,7 @@ import Link from "next/link"
 import CustomButton from '../components/button'
 import CustomCounter from '../components/Counter/Index'
 import People from '../components/Log-effect/index'
+import People from '../components/Log-effect/index'
 
 export default function Home() {
     return (
