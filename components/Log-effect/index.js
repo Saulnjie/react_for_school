@@ -1,11 +1,14 @@
 import React, {useEffect, useState} from "react";
+import { Card } from "../Card/index";
 
 
 const People = () => {
     const [people, setPeople] = useState ([]);
     const [isLoading, setIsLoading] = useState(false);
     // const [isError, setIsError] = useState();
-  
+
+    console.log(people)
+    
     useEffect(() => {
         async function fetchData() {
             setIsLoading(true);
@@ -22,7 +25,6 @@ const People = () => {
 
     if (isLoading) {
         return <h2>Loading</h2>
-        return console.log("ITS LOADING")
     };
 
     return (
@@ -36,5 +38,8 @@ const People = () => {
             ))}
         </div>
     )
+
+
 }
+
 export default People;
