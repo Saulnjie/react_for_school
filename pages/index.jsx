@@ -2,6 +2,7 @@ import React from 'react'
 import Link from "next/link"
 import CustomButton from '../components/button'
 import CustomCounter from '../components/Counter/Index'
+import People from '../components/Log-effect/index'
 
 export default function Home() {
     return (
@@ -17,6 +18,8 @@ export default function Home() {
                 </a>
             </Link>
             <br />
+            <People></People>
+            <br/>
             <div className="counter_container">
                 <CustomCounter></CustomCounter>  
             </div>
