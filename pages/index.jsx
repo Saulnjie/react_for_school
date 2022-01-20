@@ -3,7 +3,7 @@ import Link from "next/link"
 import CustomButton from '../components/button'
 import CustomCounter from '../components/Counter/Index'
 import People from '../components/Log-effect/index'
-import People from '../components/Log-effect/index'
+import Contact from '../components/Contact/contact'
 
 export default function Home() {
     return (
@@ -21,6 +21,7 @@ export default function Home() {
             <br />
             <People></People>
             <br/>
+            <Contact></Contact>
             <div className="counter_container">
                 <CustomCounter></CustomCounter>  
             </div>
