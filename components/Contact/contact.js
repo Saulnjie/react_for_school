@@ -5,6 +5,21 @@ export default function Contact() {
     const [email, setEmail] = useState ("");
     const [message, setMessage] = useState ("");
 
+    const handleOnChangeEvent = (event) => {
+        const name = event.target.name;
+        const value = event.target.value;
+    
+        if (name === "firstName") {
+          setFirstName(value);
+        }
+        if (name === "email") {
+          setEmail(value);
+        }
+        if (name === "message") {
+          setMessage(value);
+        }
+      };
+
     return (
         <div>
             <form
@@ -24,10 +39,7 @@ export default function Contact() {
                     id="firstName" 
                     type="text" 
                     name="firstName" 
-                    onChange={(event) => {
-                        console.log("Event", event);
-                        setFirstName(event.target.value);
-                    }}
+                    onChange={handleOnChangeEvent}
                     onBlur={(event) => {
                         console.warn("Element has been blurred", event);
                     }}
@@ -41,11 +53,7 @@ export default function Contact() {
                     id="email" 
                     type="text" 
                     name="email" 
-                    
-                    onChange={(event) => {
-                        console.log("Event", event);
-                        setEmail(event.target.value);
-                    }}
+                    onChange={handleOnChangeEvent}
                     onBlur={(event) => {
                         console.warn("Element has been blurred", event);
                     }}
@@ -59,10 +67,7 @@ export default function Contact() {
                     id="message" 
                     type="text" 
                     name="message" 
-                    onChange={(event) => {
-                        console.log("Event", event);
-                        setMessage(event.target.value);
-                    }}
+                    onChange={handleOnChangeEvent}
                     onBlur={(event) => {
                         console.warn("Element has been blurred", event);
                     }}
